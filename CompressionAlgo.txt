@@ -1,0 +1,14 @@
+//gCode
+Gzip('Dynamic Huffman Coding','index.html.gz','',false)
+To_Hex('0x',0)
+Split('0x',', 0x')
+
+//Json
+[
+  { "op": "Gzip",
+    "args": ["Dynamic Huffman Coding", "index.html.gz", "", false] },
+  { "op": "To Hex",
+    "args": ["0x", 0] },
+  { "op": "Split",
+    "args": ["0x", ", 0x"] }
+]
