@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; /* เต็มความสูงจอ */
+}
+
+header {
+  background-color: #6495ed;
+  color: white;
+  padding: 2vh 0; /* ใช้ vh แทน px */
+  width: 100%;
+  text-align: center;
+  font-size: 2.5vh; /* ปรับให้สัมพันธ์ขนาดจอ */
+  font-weight: bold;
+}
+
+.form-container {
+  background: white;
+  padding: 3vh;
+  margin-top: 4vh;
+  border-radius: 1.5vh;
+  box-shadow: 0 0 1vh rgba(0,0,0,0.1);
+  width: 85vw;
+  max-width: 45vh; /* จำกัดขนาดตามความสูงจอ */
+}
+
+input {
+  width: 100%;
+  padding: 1.8vh;
+  margin: 1.5vh 0;
+  border: 0.2vh solid #ccc;
+  border-radius: 1vh;
+  font-size: 2vh;
+  box-sizing: border-box;
+}
+
+.btn-signin {
+  width: 100%;
+  padding: 1.8vh;
+  background-color: #6495ed;
+  color: white;
+  border: none;
+  border-radius: 1vh;
+  font-size: 2vh;
+  cursor: pointer;
+}
+
+.btn-signin:hover {
+  background-color: #4a7bd6;
+}
+
+.register-link {
+  margin-top: 2vh;
+  text-align: center;
+  font-size: 1.8vh;
+}
+
+.register-link a {
+  color: #6495ed;
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="/stylesheets/styleRegister.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <header>Register</header>
+
+  <div class="button-container">
+    <button id="backBtn" onclick="goBack()">←</button>
+  </div>
+
+  <div class="container">
+    <!-- ✅ เพิ่ม id="registerForm" -->
+    <form id="registerForm" action="/register" method="POST">
+      <!-- ✅ เพิ่ม id ให้แต่ละ input -->
+      <input type="text" id="name" name="username" placeholder="Name" required>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+      <input type="password" id="password" name="password" placeholder="Password" required>
+      <input type="password" id="confirm" name="confirm" placeholder="Confirm Password" required>
+      <p id="msg" style="color:red; text-align:center;"></p>
+      <button type="submit" id="submitBtn">Register</button>
+    </form>
+  </div>
+
+  <script>
+    function goBack() {
+      history.back();
+    }
+
+    document.getElementById("registerForm").addEventListener("submit", function(e){
+      e.preventDefault(); // ป้องกัน reload หน้า
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const pass = document.getElementById("password").value;
+      const confirm = document.getElementById("confirm").value;
+      const msg = document.getElementById("msg");
+
+      // ✅ ตรวจสอบข้อมูล
+      if(!name || !email || !pass || !confirm){
+        msg.textContent = "Please fill in all fields";
+        return;
+      }
+      if(pass !== confirm){
+        msg.textContent = "Passwords do not match";
+        return;
+      }
+
+      // ✅ ถ้าข้อมูลถูกต้อง → ส่งฟอร์ม แล้วไปหน้า login ทันที
+      this.submit();
+      window.location.href = "/login";
+    });
+  </script>
+</body>
+</html>

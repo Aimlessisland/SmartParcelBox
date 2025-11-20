@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Parcel Locker</title>
+  <link rel="stylesheet" href="/stylesheets/styleStatus.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <header>Smart Parcel Locker</header>
+
+  <div class="button-container">
+    <button id="backBtn" onclick="window.location.href='/main'">←</button>
+  </div>
+
+  <table id="log">
+    <tr>
+      <th>พัสดุ</th>
+      <th>เวลาที่รับเข้ามา</th>
+    </tr>
+  </table>
+
+  <script>
+    var logTable = document.getElementById("log");
+    var count = 3;
+    var logs = [
+      { id: 1, time: "2025-10-19 21:55" },
+      { id: 2, time: "2025-10-19 21:57" },
+      { id: 3, time: "2025-10-19 22:00" }
+    ];
+
+    function formatDate(d) {
+      var y = d.getFullYear();
+      var m = (d.getMonth() + 1).toString().padStart(2, "0");
+      var day = d.getDate().toString().padStart(2, "0");
+      var h = d.getHours().toString().padStart(2, "0");
+      var min = d.getMinutes().toString().padStart(2, "0");
+      return y + "-" + m + "-" + day + " " + h + ":" + min;
+    }
+
+    function showLogs() {
+      logTable.innerHTML = "<tr><th>พัสดุ</th><th>เวลาที่รับเข้ามา</th></tr>";
+      logs.forEach(log => {
+        logTable.innerHTML += `<tr><td>${log.id}</td><td>${log.time}</td></tr>`;
+      });
+    }
+
+    showLogs();
+
+    setInterval(function() {
+      count++;
+      logs.push({ id: count, time: formatDate(new Date()) });
+      showLogs();
+    }, 5000);
+
+  </script>
+</body>

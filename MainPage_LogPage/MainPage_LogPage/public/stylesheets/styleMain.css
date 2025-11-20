@@ -1,0 +1,152 @@
+body {
+  padding: 5vw;
+  font: 3.5vw "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls, .LockUnlock, #StatusBtn , #CloseBtn ,#CallBtn {
+  width: 90vw;
+  max-width: 640px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 3vh;
+}
+
+button {
+  width: 44vw;
+  max-width: 310px;
+  height: 8vh;
+  padding: 1.5vh 3vw;
+  font-size: 4.5vw;
+  border: none;
+  border-radius: 8px;
+  background-color: #509cfa;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3a7bd5;
+}
+
+.content {
+  text-align: center;
+}
+
+#canvas {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10vh;
+  border: 2px solid #509cfa;
+  border-radius: 5px;
+  width: 90vw;
+  max-width: 640px;
+  height: auto;
+}
+
+.LockUnlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2vh;
+  gap: 10px;
+}
+
+.LockUnlock button {
+  color: #509cfa;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 24px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.LockUnlock button.active {
+  background-color: #509cfa;
+  color: white;
+  transform: scale(1);
+}
+
+#StatusBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2vh;
+}
+
+.topnav {
+  background-color: #509cfa; 
+  color: white; 
+  padding: 0 5vw; 
+  height: 9vh; 
+  display: flex; 
+  justify-content: flex-end; 
+  align-items: center; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  z-index: 1000; 
+}
+
+#toptxt {
+  position: absolute;
+  left: 45%;
+  transform: translateX(-50%);
+  font-size: 4vw;
+}
+
+#setting {
+  background-color: transparent; 
+  border: 1px solid white;
+  color: white;
+  height: 7vh;
+  width: 25vw;
+  min-width: 100px;
+  max-width: 100px;
+  margin-right: 10vw;            
+  padding: 1vh 2vw;          
+  border-radius: 8px;           
+  cursor: pointer;          
+  transition: background-color 0.2s; 
+}
+
+#setting:hover {
+  background-color: rgba(255, 255, 255, 0.15); 
+}
+
+.ClosePage {
+  position: fixed;
+  bottom: 2vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 500;
+}
+
+#CloseBtn {
+  background-color: red;
+}
+
+#CloseBtn:hover {
+  background-color: darkred;
+}
+

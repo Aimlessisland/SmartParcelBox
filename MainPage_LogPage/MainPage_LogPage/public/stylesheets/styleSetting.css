@@ -1,0 +1,116 @@
+/* ===== TOP NAV ===== */
+.topnav {
+  background-color: #509cfa; 
+  color: white; 
+  padding: 0 5vw; 
+  height: 9vh; 
+  display: flex; 
+  justify-content: flex-end; 
+  align-items: center; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  z-index: 1000; 
+}
+
+#toptxt {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4vw;
+  letter-spacing: 0.5px;
+}
+
+/* ===== FORM CONTAINER ===== */
+.setting-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 12vh; 
+  padding: 20px;
+}
+
+.setting-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80vw;
+  max-width: 500px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  align-items: stretch;
+}
+
+/* ===== LABEL ===== */
+label {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* ===== INPUT ===== */
+input {
+  width: 100%;
+  height: 6vh;
+  padding: 1vh 1vw;
+  font-size: 1rem;
+  border: 2px solid #d0d7de;
+  border-radius: 10px;
+  background-color: #f9fbff;
+  transition: all 0.25s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #509cfa;
+  background-color: #ffffff;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(80, 156, 250, 0.2);
+}
+
+input::placeholder {
+  color: #9aa0a6;
+  font-size: 0.95rem;
+}
+
+/* ===== BUTTON ===== */
+button {
+  width: 100%;
+  height: 7vh;
+  border: none;
+  border-radius: 12px;
+  background-color: #509cfa;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #3a7bd5;
+  box-shadow: 0 3px 8px rgba(80,156,250,0.4);
+}
+
+.ClosePage {
+  position: fixed;
+  bottom: 2vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 500;
+  width: 80vw;
+  max-width: 500px;
+}
+
+#CloseBtn {
+  background-color: red;
+}
+
+#CloseBtn:hover {
+  background-color: darkred;
+}

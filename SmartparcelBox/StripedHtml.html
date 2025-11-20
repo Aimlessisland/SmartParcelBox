@@ -1,0 +1,29 @@
+<!doctype html>
+    <head>
+        <title>
+            ESP32 OV3660
+        </title>
+        <style>
+            
+            body {
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <img id = "stream"
+          src="" 
+          width="640" 
+          height="480"
+        >
+    </body>
+    <script>
+        
+        var baseHost = document.location.origin
+        var streamUrl = baseHost + ':81'
+        const view = document.getElementById('stream')
+        view.src = `${streamUrl}/stream`
+           
+    </script>
+</html>
