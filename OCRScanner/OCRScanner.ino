@@ -9,8 +9,8 @@
 // ===========================
 // Enter your WiFi credentials
 // ===========================
-const char *ssid = "Richywifi_2.4G_hz";
-const char *password = "ld0804013242";
+const char *ssid = "GG3355";
+const char *password = "qwertyui";
 
 void startCameraServer();
 void setupLedFlash();
