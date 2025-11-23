@@ -28,11 +28,11 @@
       </div>
 
       <div class="LockUnlock">
-        <button id="LockBtn">
+        <button id="LockBtn" onclick="sendCommand('/0')" >
           <i class="fa-solid fa-lock"></i>
         </button>
 
-        <button id="unlockBtn">
+        <button id="unlockBtn" onclick="sendCommand('/90')" >
           <i class="fa-solid fa-lock-open"></i>
         </button>
       </div>
@@ -59,6 +59,28 @@
         });
       });
       document.getElementById('LockBtn').classList.add('active');
+    </script>
+    <script>
+        const ESP32_IP = "http://192.168.1.172"; 
+        function sendCommand(path) {
+            const fullUrl = ESP32_IP + path;
+            
+            // 1. Send the request in the background
+            fetch(fullUrl)
+                .then(response => {
+                    // 2. Check if the ESP32 responded OK (status 200)
+                    if (response.ok) {
+                        console.log("Command sent: " + path);
+                        // You can optionally update a status message here
+                    } else {
+                        console.error("Error response from ESP32:", response.status);
+                    }
+                })
+                .catch(error => {
+                    // 3. Handle network errors
+                    console.error("Network error:", error);
+                });
+        }
     </script>
   </body>
 
